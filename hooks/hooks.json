@@ -1,0 +1,14 @@
+{
+  "description": "Hebrew replies and readable mixed Hebrew/English text",
+  "hooks": {
+    "SessionStart": [
+      { "hooks": [ { "type": "command", "command": "cat \"${CLAUDE_PLUGIN_ROOT}/hooks/context/session-start.json\"" } ] }
+    ],
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command", "command": "cat \"${CLAUDE_PLUGIN_ROOT}/hooks/context/user-prompt.json\"" } ] }
+    ],
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": "echo `# <#` >/dev/null; f=\"${CLAUDE_PLUGIN_ROOT}/hooks/stop-check.sh\"; [ -f \"$f\" ] && sh \"$f\"; exit 0 #> > $null; try { $p = \"${CLAUDE_PLUGIN_ROOT}/hooks/stop-check.ps1\"; if (Test-Path -LiteralPath $p) { & $p } } catch { }; exit 0", "timeout": 10 } ] }
+    ]
+  }
+}

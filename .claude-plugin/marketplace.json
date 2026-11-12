@@ -1,0 +1,12 @@
+{
+  "name": "omrik4",
+  "owner": { "name": "BossOmri" },
+  "description": "Claude Code plugins by BossOmri, including hebrew-rtl-bidi for readable Hebrew and mixed Hebrew/English output.",
+  "plugins": [
+    {
+      "name": "hebrew-rtl-bidi",
+      "source": "./",
+      "description": "Keeps Claude Code replies in Hebrew and keeps mixed Hebrew/English lines readable (RTL / bidi)."
+    }
+  ]
+}

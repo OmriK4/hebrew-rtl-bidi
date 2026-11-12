@@ -1,0 +1,1 @@
+הפרויקט בנוי על Next.js עם TypeScript, והנתונים נשמרים ב-Supabase. את הסגנונות כתבתי ב-Tailwind CSS, ואת הפריסה הגדרתי ב-Vercel דרך GitHub Actions, כך שכל push לענף main מפעיל build חדש ופריסה אוטומטית.

@@ -1,0 +1,1 @@
+התיעוד המלא נמצא בכתובת https://docs.example.com/guides/getting-started/installation?lang=he&version=latest#prerequisites ואפשר לקרוא גם את [מדריך ההתקנה](https://docs.example.com/guides/install-and-configure/step-by-step) לפני שמתחילים.

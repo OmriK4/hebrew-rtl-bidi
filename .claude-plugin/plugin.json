@@ -1,0 +1,8 @@
+{
+  "name": "hebrew-rtl-bidi",
+  "version": "1.0.0",
+  "description": "Keeps Claude Code replies in Hebrew and keeps mixed Hebrew/English lines readable (RTL / bidi).",
+  "author": { "name": "BossOmri" },
+  "repository": "https://github.com/OmriK4/hebrew-rtl-bidi",
+  "license": "MIT"
+}
