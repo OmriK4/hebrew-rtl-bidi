@@ -10,9 +10,13 @@
 
 לפני: השורה נפתחת במילה באנגלית.
 
+<div dir="ltr">
+
 ```text
 React היא לא אחת משתי ההמלצות (כרגע הן Vue ו-Svelte), אז צריך להחליט איפה היא נכנסת.
 ```
+
+</div>
 
 אחרי: השורה נפתחת במילה עברית.
 
@@ -20,7 +24,7 @@ React היא לא אחת משתי ההמלצות (כרגע הן Vue ו-Svelte), 
 הספרייה React היא לא אחת משתי ההמלצות (כרגע הן Vue ו-Svelte), אז צריך להחליט איפה היא נכנסת.
 ```
 
-הדוגמה מוצגת כאן בבלוקי קוד, ולכן ההבדל לא תמיד נראה. בצ'אט עצמו השורה הראשונה מתבלגנת והשנייה לא.
+כך זה נראה גם בצ'אט עצמו: השורה הראשונה מתבלגנת, והשנייה נקראת כרגיל.
 
 ## התקנה
 
@@ -36,6 +40,8 @@ claude plugin install hebrew-rtl-bidi --marketplace OmriK4/hebrew-rtl-bidi
 
 אם הפקודה למעלה לא עובדת, כנראה הגרסה שלך ישנה. מקלידים בתוך סשן של Claude Code, בזה אחר זה:
 
+<div dir="ltr">
+
 ```text
 /plugin marketplace add OmriK4/hebrew-rtl-bidi
 ```
@@ -43,6 +49,8 @@ claude plugin install hebrew-rtl-bidi --marketplace OmriK4/hebrew-rtl-bidi
 ```text
 /plugin install hebrew-rtl-bidi@omrik4
 ```
+
+</div>
 
 ## דרישות
 
