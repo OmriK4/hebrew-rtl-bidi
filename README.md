@@ -61,7 +61,7 @@ claude plugin install hebrew-rtl-bidi --marketplace OmriK4/hebrew-rtl-bidi
 
 ## המלצה משלימה
 
-מוסיפים לקובץ `~/.claude/settings.json`, בתוך הסוגריים המסולסלים החיצוניים, את ההגדרה הרשמית של Claude Code:
+מוסיפים לקובץ <code dir="ltr">~/.claude/settings.json</code>, בתוך הסוגריים המסולסלים החיצוניים, את ההגדרה הרשמית של Claude Code:
 
 ```json
 "language": "hebrew"
