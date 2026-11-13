@@ -28,7 +28,41 @@ React היא לא אחת משתי ההמלצות (כרגע הן Vue ו-Svelte), 
 
 ## התקנה
 
-בטרמינל מריצים פקודה אחת:
+לפני הכול צריך `git` מותקן במחשב, כי Claude Code מושך את הפלאגין מ-GitHub בעזרתו.
+ב-Windows מתקינים אותו פעם אחת, ב-PowerShell:
+
+```powershell
+winget install --id Git.Git -e
+```
+
+אם `git` כבר מותקן, מוודאים שהוא בגרסה העדכנית ביותר. ב-Windows מעדכנים ב-PowerShell:
+
+```powershell
+winget upgrade --id Git.Git -e
+```
+
+אחר כך סוגרים את VS Code או את הטרמינל לגמרי ופותחים מחדש. אם עדיין לא עובד, מפעילים מחדש את המחשב.
+
+### התקנה ב-VS Code
+
+1. בחלונית של Claude Code מקלידים את הפקודה `/plugins`. נפתח מסך **Manage plugins**.
+2. בלשונית **Marketplaces** מוסיפים את הכתובת `OmriK4/hebrew-rtl-bidi`.
+3. בלשונית **Plugins** לוחצים **Install** ליד `hebrew-rtl-bidi`, ובוחרים התקנה למשתמש (User).
+4. פותחים שיחה חדשה.
+
+אפשר גם לפתוח את מסך ההתקנה ישירות. מדביקים בשורת הכתובת של הדפדפן:
+
+<div dir="ltr">
+
+```text
+vscode://anthropic.claude-code/install-plugin?plugin=hebrew-rtl-bidi&marketplace=OmriK4/hebrew-rtl-bidi
+```
+
+</div>
+
+### התקנה בטרמינל
+
+מריצים פקודה אחת:
 
 ```bash
 claude plugin install hebrew-rtl-bidi --marketplace OmriK4/hebrew-rtl-bidi
@@ -36,9 +70,14 @@ claude plugin install hebrew-rtl-bidi --marketplace OmriK4/hebrew-rtl-bidi
 
 אחר כך פותחים סשן חדש. פלאגין שהותקן כך זמין גם באפליקציית הדסקטופ וגם ב-VS Code באותו מחשב.
 
-## התקנה בשני שלבים
+אם הפקודה לא עובדת, כנראה הגרסה שלך ישנה. מריצים בשני שלבים:
 
-אם הפקודה למעלה לא עובדת, כנראה הגרסה שלך ישנה. מקלידים בתוך סשן של Claude Code, בזה אחר זה:
+```bash
+claude plugin marketplace add OmriK4/hebrew-rtl-bidi
+claude plugin install hebrew-rtl-bidi@omrik4
+```
+
+בתוך סשן של Claude Code אפשר להקליד את אותן פקודות עם `/plugin` בהתחלה:
 
 <div dir="ltr">
 
@@ -54,9 +93,10 @@ claude plugin install hebrew-rtl-bidi --marketplace OmriK4/hebrew-rtl-bidi
 
 ## דרישות
 
-- גרסה `2.1.292` ומעלה של Claude Code, בשביל ההתקנה בפקודה אחת.
-- ב-Windows מומלץ להתקין Git for Windows. איתו ההוקים רצים ב-Git Bash, עם ה-Perl שמגיע איתו.
-- בלי Git for Windows ההוקים רצים ב-Windows PowerShell. ברירת המחדל שם חוסמת הרצת סקריפטים, ולכן הבדיקה בסוף התשובה עלולה לא לרוץ. הכללים והתזכורת ממשיכים לעבוד.
+- הכלי `git`, כפי שמוסבר למעלה.
+- גרסה `2.1.292` ומעלה של Claude Code, בשביל ההתקנה בפקודה אחת בטרמינל.
+- ב-Windows ההוקים רצים ב-Git Bash, עם ה-Perl שמגיע עם Git for Windows.
+- אם ההוקים רצים אצלך ב-Windows PowerShell במקום ב-Git Bash, ברירת המחדל שם חוסמת הרצת סקריפטים, והבדיקה בסוף התשובה עלולה לא לרוץ. הכללים והתזכורת ממשיכים לעבוד.
 - אין צורך ב-Node או ב-Python. הפלאגין לא תלוי בכלום מעבר למה שהמערכת כבר נותנת.
 
 ## המלצה משלימה
@@ -109,7 +149,7 @@ claude plugin install hebrew-rtl-bidi --marketplace OmriK4/hebrew-rtl-bidi
 - שאלות עם כפתורי בחירה לא נבדקות.
 - שורה שנפתחת במילה עברית ואז ממשיכה כולה באנגלית לא נתפסת.
 - הכללים מותאמים לאפליקציית הדסקטופ ול-VS Code. בטרמינל התצוגה עשויה להיות שונה.
-- ב-Windows בלי Git for Windows, הבדיקה בסוף התשובה עלולה לא לרוץ. ברירת המחדל של PowerShell חוסמת סקריפטים, והפלאגין לא עוקף אותה. הכללים והתזכורת ממשיכים לעבוד.
+- ב-Windows, אם ההוקים רצים ב-PowerShell, הבדיקה בסוף התשובה עלולה לא לרוץ. ברירת המחדל של PowerShell חוסמת סקריפטים, והפלאגין לא עוקף אותה. הכללים והתזכורת ממשיכים לעבוד.
 
 ## עדכון והסרה
 
